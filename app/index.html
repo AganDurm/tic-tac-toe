@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157537178-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-157537178-1');
+    </script>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=.7">
+    <meta charset="UTF-8">
+    <!-- links -->
+    <link type="image/png" rel="icon" href="https://www.durmex.de/img/d.png">
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Tic Tac Toe</h1>
+        <h3 id="currentPlayer">START</h3>
+        <h2 id="pickText">You are?</h2>
+        <div class="buttons">
+            <button id="pickX" class="btn btn-outline-primary btn-lg" onClick="pickX()">X</button>
+            <button id="pickO" class="btn btn-outline-danger btn-lg" onClick="pickO()">O</button>
+            <button class="intro btn btn-outline-primary btn-lg" onClick="chooseMode('auto')">Auto</button>
+            <span class="intro or" id="or">or</span>
+            <button class="intro btn btn-outline-primary btn-lg" onClick="chooseMode('normal')">Normal</button>
+        </div>
+        <table class="board" id="board">
+            <tr>
+                <td id="0" class="block" onClick="gameHandler(this)"></td>
+                <td id="1" class="block" onClick="gameHandler(this)"></td>
+                <td id="2" class="block" onClick="gameHandler(this)"></td>
+            </tr>
+            <tr>
+                <td id="3" class="block" onClick="gameHandler(this)"></td>
+                <td id="4" class="block" onClick="gameHandler(this)"></td>
+                <td id="5" class="block" onClick="gameHandler(this)"></td>
+            </tr>
+            <tr>
+                <td id="6" class="block" onClick="gameHandler(this)"></td>
+                <td id="7" class="block" onClick="gameHandler(this)"></td>
+                <td id="8" class="block" onClick="gameHandler(this)"></td>
+            </tr>
+        </table>
+        <button id="restart" class="btn btn-outline-primary restart" onClick="reset()">Play Again</button>
+    </div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
